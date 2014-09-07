@@ -1,6 +1,13 @@
-modules.define('lcd-chars', ['i-bem__dom'], function(provide, BEMDOM) {
+modules.define('lcd-chars', ['i-bem__dom', 'functions__throttle'], function(provide, BEMDOM, throttle) {
 
     BEMDOM.decl('lcd-chars', {
+        onSetMod: {
+            js: {
+                inited: function() {
+                    this._throttledOnMouseMove = throttle(this._onMouseMove, 25, this);
+                }
+            }
+        },
         _onMouseDown: function() {
             this._draw = true;
         },
@@ -29,7 +36,7 @@ modules.define('lcd-chars', ['i-bem__dom'], function(provide, BEMDOM) {
                 e.preventDefault();
             });
             this.liveBindTo('mousemove', function(e) {
-                this._onMouseMove(e);
+                this._throttledOnMouseMove(e);
                 e.preventDefault();
             });
         }
