@@ -4,5 +4,5 @@ if (typeof console !== 'undefined') {
     line-height:50px; \
     margin:15px; \
     padding:10px; display: inline-block;'
-    console.log('%c https://github.com/sbmaxx/lcd-charrs', css);
+    console.log('%c https://github.com/sbmaxx/lcd-chars', css);
 }
