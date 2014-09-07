@@ -29,6 +29,9 @@ module.exports = {
         // },
         {
             block: 'debug'
+        },
+        {
+            block: 'canvas'
         }
     ]
 }
