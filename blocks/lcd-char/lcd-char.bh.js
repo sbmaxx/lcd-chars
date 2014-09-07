@@ -2,7 +2,7 @@ bh.match('lcd-char', function(ctx, json) {
 
     ctx.js(true);
 
-    var rows = 8,
+    var rows = 7, // 8 for cursor
         cols = 5;
 
     var content = []
