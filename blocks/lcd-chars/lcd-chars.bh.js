@@ -17,6 +17,7 @@ bh.match('lcd-chars', function(ctx, json) {
     for (var i = 0; i < rows; i++) {
         content.push({
             elem: 'row',
+            mix: [{ block: 'clearfix' }],
             content: chars
         });
     }

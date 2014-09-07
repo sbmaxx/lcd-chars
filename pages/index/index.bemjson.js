@@ -21,12 +21,12 @@ module.exports = {
         {
             block: 'clearfix'
         },
-        {
-            block: 'lcd-char',
-            mods: {
-                size: 'big'
-            }
-        },
+        // {
+        //     block: 'lcd-char',
+        //     mods: {
+        //         size: 'big'
+        //     }
+        // },
         {
             block: 'debug'
         }
