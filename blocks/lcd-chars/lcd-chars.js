@@ -22,12 +22,15 @@ modules.define('lcd-chars', ['i-bem__dom'], function(provide, BEMDOM) {
         live: function() {
             this.liveBindTo('mousedown', function(e) {
                 this._onMouseDown(e);
+                e.preventDefault();
             });
             this.liveBindTo('mouseup', function(e) {
                 this._onMouseUp(e);
+                e.preventDefault();
             });
             this.liveBindTo('mousemove', function(e) {
                 this._onMouseMove(e);
+                e.preventDefault();
             });
         }
     });

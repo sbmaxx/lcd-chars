@@ -19,6 +19,15 @@ module.exports = {
             rows: 4
         },
         {
+            block: 'clearfix'
+        },
+        {
+            block: 'lcd-char',
+            mods: {
+                size: 'big'
+            }
+        },
+        {
             block: 'debug'
         }
     ]

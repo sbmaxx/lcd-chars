@@ -5,12 +5,16 @@
     border: 1px solid black;
     cursor: pointer;
     &__cell {
-        width: 5px;
-        height: 8px;
+        width: 10px;
+        height: 10px;
         margin: 0;
         padding: 0;
         &_selected_yes {
             background: black;
         }
+    }
+    &_size_big &__cell {
+        width: 20px;
+        height: 32px;
     }
 }
