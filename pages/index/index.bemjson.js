@@ -13,14 +13,11 @@ module.exports = {
         }
     ],
     content: [
-        [
-            {
-                block: 'char'
-            },
-            {
-                block: 'char'
-            }
-        ],
+        {
+            block: 'lcd-chars',
+            cols: 20,
+            rows: 4
+        },
         {
             block: 'debug'
         }
