@@ -14,7 +14,7 @@ modules.define('lcd-chars', ['i-bem__dom'], function(provide, BEMDOM) {
                 elem = $(e.target);
                 block = elem.parents('.lcd-char');
                 if (block.length) {
-                    block.bem('lcd-char').select(elem);
+                    e.shiftKey ? block.bem('lcd-char').unselect(elem) : block.bem('lcd-char').select(elem);
                 }
             }
         }

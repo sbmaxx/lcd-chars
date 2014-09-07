@@ -2,10 +2,15 @@ modules.define('lcd-char', ['i-bem__dom'], function(provide, BEMDOM) {
 
     BEMDOM.decl('lcd-char', {
         _onClick: function(e) {
-            this.select(e.target);
+            this.toggle(e.target);
         },
         select: function(domElem) {
-            domElem = $(domElem);
+            this.setMod($(domElem), 'selected', 'yes');
+        },
+        unselect: function(domElem) {
+            this.delMod($(domElem), 'selected');
+        },
+        toggle: function(domElem) {
             this.toggleMod(domElem, 'selected', 'yes', '', !this.hasMod(domElem, 'selected', 'yes'));
         }
     }, {
