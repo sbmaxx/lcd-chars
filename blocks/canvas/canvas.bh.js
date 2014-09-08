@@ -1,4 +1,13 @@
 bh.match('canvas', function(ctx) {
     ctx.js(true);
-    ctx.tag('canvas');
+    ctx.content([
+        {
+            elem: 'image',
+            tag: 'canvas'
+        },
+        {
+            elem: 'debug',
+            tag: 'textarea'
+        }
+    ])
 });
